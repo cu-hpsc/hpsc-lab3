@@ -1,7 +1,7 @@
 # HPSC Lab 3
 2019-09-13
 
-Click to [accept this assignment](https://classroom.github.com/a/DOC_yYu2).
+Click to [accept this assignment](https://classroom.github.com/a/pla4omKL).
 
 The goals for this lab are:
 * Practice using the tools needed for homework 1 (e.g. git, OpenMP)
