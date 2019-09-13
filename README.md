@@ -31,6 +31,7 @@ Compile and run this code, redirecting output to a file:
 
 The first row of output gives the $$(a_min,a_max,b_min,b_max)$$ domain of candidates.  The remaining rows each represent a successive value of $$a$$, with spaced entries corresponding to successive values of $$b$$, having value equal to whether they were within the divergence threshold after the function iterations completed.  We provide a python script (requiring the matplotlib module) to visualize this, where the horizontal axis is the real part, the vertical axis is the imaginary part, and the color designates whether the point "survived" all of the iterations:
 ```python visualize.py outfile```
+[For those running on a remote machine without graphics, like CSEL, ```visualize.py``` accepts an optional ```-o [path]``` flag to output the image to a file, which you can then open in a browser or copy back to your local machine.  Of course, the downside is that you can't interactively pan/zoom.  Copying the ```outfile``` to your local machine is another option, although it can get large for high ```-d```.]
 
 The fractal nature should already be noticable! (with the defaults ```-d 100 -m 1000```)  Play with adjusting ```-d```; you should (once again!) be able to see the effects of cache sizes on the throughput rate (here measured in maps/tick).  WARNING: memory usage scales quadratically with ```-d```!  For reference ```-d 8000``` uses just about 8 GB of RAM and creates a 4.3 GB output file.
 

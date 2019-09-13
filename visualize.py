@@ -6,6 +6,8 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("datapath", metavar="path", type=str,
                         help="path to data file")
+    parser.add_argument("-o", "--outpath", metavar="path", type=str,
+                        default=None, help="path to save image")
     args = parser.parse_args(argv)
     return(args)
 
@@ -28,7 +30,10 @@ def main(args):
     ranges[2] -= shifty
     ranges[3] += shifty
     pyplot.imshow(imgmat,extent=ranges)
-    pyplot.show()
+    if args.outpath is None:
+        pyplot.show()
+    else:
+        pyplot.savefig(args.outpath)
 
 
 
